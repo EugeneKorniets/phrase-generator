@@ -31,13 +31,44 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/strongly-recommended",
       "@vue/standard"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "vue/script-indent": [
+        "error",
+        2,
+        {
+        "baseIndent": 1
+        }
+      ],
+      "vue/name-property-casing": [
+        "error",
+        "kebab-case"
+      ],
+      "vue/html-closing-bracket-spacing": [
+        "error", {
+        "startTag": "never",
+        "endTag": "never",
+        "selfClosingTag": "never"
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": ["*.vue"],
+        "rules": {
+          "indent": "off"
+        }
+      }
+    ]
   },
   "postcss": {
     "plugins": {
