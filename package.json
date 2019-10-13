@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "now-start": "npm run build && node server/server.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "express": "^4.17.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -46,7 +48,7 @@
         "error",
         2,
         {
-        "baseIndent": 1
+          "baseIndent": 1
         }
       ],
       "vue/name-property-casing": [
@@ -54,16 +56,19 @@
         "kebab-case"
       ],
       "vue/html-closing-bracket-spacing": [
-        "error", {
-        "startTag": "never",
-        "endTag": "never",
-        "selfClosingTag": "never"
+        "error",
+        {
+          "startTag": "never",
+          "endTag": "never",
+          "selfClosingTag": "never"
         }
       ]
     },
     "overrides": [
       {
-        "files": ["*.vue"],
+        "files": [
+          "*.vue"
+        ],
         "rules": {
           "indent": "off"
         }
