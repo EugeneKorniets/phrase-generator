@@ -1,7 +1,9 @@
 const express = require('express')
 
+const port = process.env.PORT || 3000
+
 const server = express()
 
 server.use(express.static('dist'))
 
-server.listen(3000, () => console.info('Application started'))
+server.listen(port, () => console.info('Application started'))
